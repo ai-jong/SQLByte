@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString*)helpWithCommand:(NSString*)cmd;
 
 
-- (void) query:(NSString*)q response:(void(^)(NSMutableArray *result))callback;
+- (void) query:(NSString*)q response:(void(^)(NSDictionary *result))callback;
 - (void) select:(nullable NSString*)q response:(void(^)(NSMutableArray *result))callback;
 
 @end
