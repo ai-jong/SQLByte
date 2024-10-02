@@ -6,7 +6,6 @@ SQLByte provides a powerful interface for integrating Gemini artificial intellig
 
 - [Features](#features)
 - [Installation](#installation)
-- [Gemini API Key](#Gemini-API-Key)
 - [Example](#example)
 - [License](#license)
 - [Contact](#contact)
@@ -31,8 +30,6 @@ target 'SQLByteExample' do
 end
 
 ```
-## Gemini API Key
-To get started with SQLByte, get API key at [Gemini](https://www.Gemini.com/en-us/ai/).
 
 ## Example
 SQLByte's compact syntax and extensive feature set allow requests with powerful features like automatic retry to be written in just a few lines of code.
@@ -40,21 +37,19 @@ SQLByte's compact syntax and extensive feature set allow requests with powerful 
 ```swift
 import SQLByte
 
-func SQLByteExample() {
-    let SQLByte = SQLByte( apiKey: "nvapi-your Gemini api key");
-                
-     SQLByte.request("taiwan in five words or less") { ( result: String) in
-        print("result: \(result)")
-     }
+func SQLByteTest() {
+  var sqlByte = SQLByte(db: "test")
         
-     let questions = ["1+1", "1+2", "2+3"]
-     for (index, q) in questions.enumerated() {
-            print("Item \(index): \(q)")
-            SQLByte.request("calculate '\(q)'") { ( result: String) in
-                print("result: \(result)")
-            }
-     }
+  sqlByte.query("CREATE TABLE IF NOT EXISTS Person(Name TEXT, Birth TEXT, Age REAL);") { (result : Dictionary) in
+  }
+        
+  sqlByte.query("INSERT INTO Person(Name, Birth, Age) VALUES('Jon', '$Time', 21.5);") { (result : Dictionary) in
+  }
+        
+  sqlByte.select("SELECT * FROM Person;") { (result : NSMutableArray) in
+  }
 }
+
 ```
 
 ## License
