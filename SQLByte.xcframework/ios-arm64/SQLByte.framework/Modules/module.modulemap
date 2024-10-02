@@ -1,0 +1,6 @@
+framework module SQLByte {
+  umbrella header "SQLByte.h"
+  export *
+
+  module * { export * }
+}
