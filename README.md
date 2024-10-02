@@ -2,7 +2,7 @@
 
 ![SQLByte: Elegant Networking in Swift](nvidia.png)
 
-SQLByte provides a powerful interface for integrating Gemini artificial intelligence capabilities into your iOS app, enabling seamless communication with advanced AI models.
+SQLByte provides a powerful interface for synchronizing and executing queries on a SQLite database. It acts as a wrapper that simplifies interaction with a local SQLite database, ensuring efficient handling of persistent local storage.
 
 - [Features](#features)
 - [Installation](#installation)
@@ -11,9 +11,10 @@ SQLByte provides a powerful interface for integrating Gemini artificial intellig
 - [Contact](#contact)
 
 ## Features
-- [x] Easy communication with Gemini AI for generating responses.
-- [x] Robust handling of machine learning outputs and AI-driven results.
-      
+- [x] SQLite Query Execution: Easily execute SQL queries on a local SQLite database.
+- [x] Persistent Local Storage: Manage long-term data storage on the device, with or without synchronization with a remote storage system.
+- [x] Convenience Methods: Simplifies the processes of reading, writing, updating, and deleting data.
+
 ## Installation
 ### CocoaPods
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects.<br> 
