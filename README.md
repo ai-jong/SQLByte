@@ -1,8 +1,8 @@
-# GeminiAI
+# SQLByte
 
-![GeminiAI: Elegant Networking in Swift](nvidia.png)
+![SQLByte: Elegant Networking in Swift](nvidia.png)
 
-GeminiAI provides a powerful interface for integrating Gemini artificial intelligence capabilities into your iOS app, enabling seamless communication with advanced AI models.
+SQLByte provides a powerful interface for integrating Gemini artificial intelligence capabilities into your iOS app, enabling seamless communication with advanced AI models.
 
 - [Features](#features)
 - [Installation](#installation)
@@ -19,38 +19,38 @@ GeminiAI provides a powerful interface for integrating Gemini artificial intelli
 ### CocoaPods
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects.<br> 
 For usage and installation instructions, visit their website.<br> 
-To integrate GeminiAI into your Xcode project using CocoaPods, <br> specify it in your `Podfile`:
+To integrate SQLByte into your Xcode project using CocoaPods, <br> specify it in your `Podfile`:
 
 ```ruby
 platform :ios, '14.0'
 use_frameworks!
 
-target 'GeminiAIExample' do
-  pod "GeminiAI", :git => 'https://github.com/ai-jong/GeminiAI.git', :branch => 'main'
-# pod 'GeminiAI', :path => '../GeminiAI/Release'
+target 'SQLByteExample' do
+  pod "SQLByte", :git => 'https://github.com/ai-jong/SQLByte.git', :branch => 'main'
+# pod 'SQLByte', :path => '../SQLByte/Release'
 end
 
 ```
 ## Gemini API Key
-To get started with GeminiAI, get API key at [Gemini](https://www.Gemini.com/en-us/ai/).
+To get started with SQLByte, get API key at [Gemini](https://www.Gemini.com/en-us/ai/).
 
 ## Example
-GeminiAI's compact syntax and extensive feature set allow requests with powerful features like automatic retry to be written in just a few lines of code.
+SQLByte's compact syntax and extensive feature set allow requests with powerful features like automatic retry to be written in just a few lines of code.
 
 ```swift
-import GeminiAI
+import SQLByte
 
-func GeminiAIExample() {
-    let geminiAI = GeminiAI( apiKey: "nvapi-your Gemini api key");
+func SQLByteExample() {
+    let SQLByte = SQLByte( apiKey: "nvapi-your Gemini api key");
                 
-     geminiAI.request("taiwan in five words or less") { ( result: String) in
+     SQLByte.request("taiwan in five words or less") { ( result: String) in
         print("result: \(result)")
      }
         
      let questions = ["1+1", "1+2", "2+3"]
      for (index, q) in questions.enumerated() {
             print("Item \(index): \(q)")
-            geminiAI.request("calculate '\(q)'") { ( result: String) in
+            SQLByte.request("calculate '\(q)'") { ( result: String) in
                 print("result: \(result)")
             }
      }
@@ -58,7 +58,7 @@ func GeminiAIExample() {
 ```
 
 ## License
-GeminiAI is released under the MIT license.
+SQLByte is released under the MIT license.
 
 ## Contact
 - [x] Author: John W. Blaine
